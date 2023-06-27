@@ -1,0 +1,13 @@
+<div class="add-new-container">
+  <span>Add new column</span>
+  <mat-form-field class="column-name">
+    <mat-label>Column name</mat-label>
+    <input #input matInput />
+    <mat-hint>This value will be used as the key for your data</mat-hint>
+  </mat-form-field>
+  <div class="buttons-container">
+    <button mat-raised-button color="primary" (click)="confirm(input.value)">
+      Confirm
+    </button>
+  </div>
+</div>

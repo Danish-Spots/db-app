@@ -1,0 +1,25 @@
+<button mat-raised-button color="primary" (click)="addColumn()">
+  Add column
+</button>
+<h4>Table</h4>
+<div class="db-table" [formGroup]="form">
+  <div class="db-column" *ngFor="let key of keys">
+    {{ key }}
+    <ng-container formArrayName="data">
+      <ng-container
+        *ngFor="let dataForm of dataFormArray.controls; let i = index"
+      >
+        <div [formGroup]="dataForm">
+          <mat-form-field>
+            <mat-label>{{ key }}</mat-label>
+            <input matInput [formControlName]="key" />
+          </mat-form-field>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+<button mat-fab color="primary" (click)="addRow()">
+  <mat-icon>add</mat-icon>
+</button>
+<button mat-raised-button color="primary" (click)="save()">Save</button>

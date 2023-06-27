@@ -1,0 +1,9 @@
+.db-table {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  .db-column {
+    display: flex;
+    flex-direction: column;
+  }
+}

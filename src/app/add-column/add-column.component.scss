@@ -1,0 +1,14 @@
+.add-new-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+
+  .column-name {
+    margin-bottom: 32px;
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
